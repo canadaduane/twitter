@@ -87,6 +87,7 @@ function renderResults() {
 }
 function getResultsHtml(results) {
   const output = results.map(item =>
+  (
     `<div class="search_item sep">` +
       `<div class="user">` +
         `<div class="user_avatar"><img src="avatar.jpg"></div>` +
@@ -101,7 +102,7 @@ function getResultsHtml(results) {
       `<div class="search_text">${item.full_text}</div>` +
     `</div>` +
     `<hr class="search_divider" />`
-    .replace(/\.\.\/\.\.\/tweets_media\//g,'canadaduane/tweets_media/'));
+  ).replace(/\.\.\/\.\.\/tweets_media\//g,'canadaduane/tweets_media/'));
 
   if (results.length > 0) {
     output.push('<a class="top-arrow" href="#tabs">top &uarr;</a>');
