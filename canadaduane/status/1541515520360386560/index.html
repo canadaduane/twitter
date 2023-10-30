@@ -23,6 +23,15 @@ I can imagine the PD sending me a text message being far more beneficial. Why do
 3. Message disappears, never to be seen again.
 
 I can imagine the PD sending me a text message being far more beneficial. Why does it work this way?</title>
+
+  <!-- Load web fonts; Inter is close to Twitter's proprietary Chirp -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap"
+    rel="stylesheet"
+  />
+
   <link rel="stylesheet" href="../../../styles.css">
 </head>
 <body>
@@ -33,23 +42,27 @@ I can imagine the PD sending me a text message being far more beneficial. Why do
       </a>
       
   	  <article class="tweet  " id="main">
-  	    <p class="display_name">
-  	      Duane Johnson
-  	    </p>
-  	    <p class="user_name">
-  	      @canadaduane
-  	    </p>
-  	    <p class="full_text">
-  	      Am I using Amber Alerts wrong? My experience:<br><br>1. LOUD EMBARRASSING SOUND comes from my phone.<br>2. I tap desperately to turn it off.<br>3. Message disappears, never to be seen again.<br><br>I can imagine the PD sending me a text message being far more beneficial. Why does it work this way?
-  	    </p>
-  	    <p class="created_at">
-  	      6/27/2022, 2:15:14 PM
-  	    </p>
-  	    <p class="favorite_count">Favs: 1</p>
-  	    <p class="retweet_count">Retweets: 0</p>
-  	    <a class="permalink" href="../1541515520360386560">link</a>
+        <div class="search_item">
+          <div class="user">
+            <div class="user_avatar"><img src="../../../avatar.jpg"></div>
+            <div class="user_text">
+              <div class="user_name">Duane Johnson</div>
+              <div class="user_infoline">
+                <div class="user_handle"><span>@</span>canadaduane</div>
+                <div class="search_time">6/27/2022, 2:15:14 PM</div>
+              </div>
+            </div>
+          </div>
+          <div class="full_text">
+            Am I using Amber Alerts wrong? My experience:<br><br>1. LOUD EMBARRASSING SOUND comes from my phone.<br>2. I tap desperately to turn it off.<br>3. Message disappears, never to be seen again.<br><br>I can imagine the PD sending me a text message being far more beneficial. Why does it work this way?
+          </div>
+          <div class="scorecard">
+            <div class="favorite_count"><em>1</em> Likes</div>
+            <div class="retweet_count"><em>0</em> Retweets</div>
+          </div>
+        </div>
   	  </article>
-
+  
   	</div>
   </div>
 </body>

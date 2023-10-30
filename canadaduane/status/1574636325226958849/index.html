@@ -23,6 +23,15 @@ Any additions you'd recommend?" />
 - Aljazeera: <a href="https://aljazeera.com">https://aljazeera.com</a>
 
 Any additions you'd recommend?</title>
+
+  <!-- Load web fonts; Inter is close to Twitter's proprietary Chirp -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap"
+    rel="stylesheet"
+  />
+
   <link rel="stylesheet" href="../../../styles.css">
 </head>
 <body>
@@ -33,23 +42,27 @@ Any additions you'd recommend?</title>
       </a>
       
   	  <article class="tweet  " id="main">
-  	    <p class="display_name">
-  	      Duane Johnson
-  	    </p>
-  	    <p class="user_name">
-  	      @canadaduane
-  	    </p>
-  	    <p class="full_text">
-  	      Some of my favorite English news sources "outside my bubble":<br><br>- ERR (Estonian News): <a href="https://news.err.ee">https://news.err.ee</a><br>- BBC (UK): <a href="https://bbc.co.uk">https://bbc.co.uk</a><br>- Aljazeera: <a href="https://aljazeera.com">https://aljazeera.com</a><br><br>Any additions you'd recommend?
-  	    </p>
-  	    <p class="created_at">
-  	      9/26/2022, 11:45:29 PM
-  	    </p>
-  	    <p class="favorite_count">Favs: 0</p>
-  	    <p class="retweet_count">Retweets: 0</p>
-  	    <a class="permalink" href="../1574636325226958849">link</a>
+        <div class="search_item">
+          <div class="user">
+            <div class="user_avatar"><img src="../../../avatar.jpg"></div>
+            <div class="user_text">
+              <div class="user_name">Duane Johnson</div>
+              <div class="user_infoline">
+                <div class="user_handle"><span>@</span>canadaduane</div>
+                <div class="search_time">9/26/2022, 11:45:29 PM</div>
+              </div>
+            </div>
+          </div>
+          <div class="full_text">
+            Some of my favorite English news sources "outside my bubble":<br><br>- ERR (Estonian News): <a href="https://news.err.ee">https://news.err.ee</a><br>- BBC (UK): <a href="https://bbc.co.uk">https://bbc.co.uk</a><br>- Aljazeera: <a href="https://aljazeera.com">https://aljazeera.com</a><br><br>Any additions you'd recommend?
+          </div>
+          <div class="scorecard">
+            <div class="favorite_count"><em>0</em> Likes</div>
+            <div class="retweet_count"><em>0</em> Retweets</div>
+          </div>
+        </div>
   	  </article>
-
+  
   	</div>
   </div>
 </body>

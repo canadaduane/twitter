@@ -1,30 +1,107 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>@canadaduane Twitter archive</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="wrapper">
-    <div class="flex-wrap">
-      <h1>Welcome to the @canadaduane Twitter archive</h1>
-      <p>This is a page where you can search many of my tweets, get a link to an archived version, and view all the content in nice, threaded form where applicable. This does not include replies to other people in this archive, so this is just "standalone" tweets and threads.</p>
-      <div class="tweet">
-        <p id="loading">Loading search...</p>
-        <div id="search" hidden>
-          <input id="search-input" type="search" />
-          <div id="sorting">Sort by: <button class="sort-button" onclick="sortResults('most-relevant')">most relevant</button> | <button class="sort-button" onclick="sortResults('oldest-first')">oldest first</button> | <button class="sort-button" onclick="sortResults('newest-first')">newest first</button> | <button class="sort-button" onclick="sortResults('most-popular')">most popular</button></div>
-          <div id="output"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@canadaduane Twitter archive</title>
+
+    <!-- Load web fonts; Inter is close to Twitter's proprietary Chirp -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="flex-wrap">
+        <h1>@canadaduane Twitter archive</h1>
+        <div class="tweet">
+          <div id="tabs">
+            <button class="tab active" id="search-tab" onclick="searchTab()">
+              Search</button
+            ><button class="tab" id="browse-tab" onclick="browseTab()">
+              Browse
+            </button>
+          </div>
+          <hr class="hr" />
+          <div id="loading">Loading search...</div>
+          <div id="search" hidden>
+            <input id="search-input" type="search" />
+            <div id="sorting">
+              Sort by:
+              <button
+                class="sort-button"
+                onclick="sortResults('most-relevant')"
+              >
+                most relevant
+              </button>
+              |
+              <button class="sort-button" onclick="sortResults('oldest-first')">
+                oldest first
+              </button>
+              |
+              <button class="sort-button" onclick="sortResults('newest-first')">
+                newest first
+              </button>
+              |
+              <button class="sort-button" onclick="sortResults('most-popular')">
+                most popular
+              </button>
+            </div>
+            <div id="output"></div>
+          </div>
+          <div id="browse" hidden>
+            <div id="browse-sort">
+              Sort by:
+              <button
+                class="sort-button-browse"
+                onclick="sortResults('oldest-first-browse')"
+              >
+                oldest first
+              </button>
+              |
+              <button
+                class="sort-button-browse"
+                onclick="sortResults('newest-first-browse')"
+              >
+                newest first
+              </button>
+              |
+              <button
+                class="sort-button"
+                onclick="sortResults('most-popular-browse')"
+              >
+                most popular
+              </button>
+            </div>
+            <div id="paging">
+              Page <input id="page-num" type="number" /> of
+              <span id="page-total">...</span>
+            </div>
+            <div id="browse-output"></div>
+          </div>
         </div>
+        <p>
+          This site was made with
+          <a href="https://tinysubversions.com/twitter-archive/make-your-own/"
+            >this Twitter archiving tool</a
+          >.
+        </p>
       </div>
-      <p>This site was made with <a href="https://tinysubversions.com/twitter-archive/make-your-own/">this Twitter archiving tool</a>.</p>
     </div>
-  </div>
-</body>
-<script src="searchDocuments.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js"></script>
-<script src="app.js"></script>
+  </body>
+  <script src="searchDocuments.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/nextapps-de/flexsearch@0.7.31/dist/flexsearch.bundle.js"></script>
+  <script src="app.js"></script>
+  <script>
+    const search = document.getElementById("search-input");
+    search.value = "twitter";
+    search.dispatchEvent(
+      new KeyboardEvent("input")
+    );
+  </script>
 </html>
